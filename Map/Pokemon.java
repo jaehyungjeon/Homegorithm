@@ -28,7 +28,7 @@ public class Pokemon {
 			map.put(num, st);
 		}
 		
-		for(int i=0; i<M; i++) {
+		for(int i=0; i<M; i++) { 
 			System.out.println(map.get(br.readLine()));
 		}
 	}
