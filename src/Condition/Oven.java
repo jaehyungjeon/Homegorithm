@@ -16,7 +16,7 @@ import java.io.*;
 	output
 	14 50
 	
-	Solution : 시간 계산 문제. -> 0보다 작으면 23으로 바뀌는게 포인트
+	Solution : 시간 계산 문제. -> 시간과 분을 잘 분배하는 것이 포인트
 */
 
 public class Oven {
