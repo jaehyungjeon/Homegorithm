@@ -16,7 +16,7 @@ import java.io.*;
 	output
 	75.0
 	
-	Solution : 
+	Solution : 배열로 새롭게 셋팅한 점수 값을 넣어주고 나누기 실시
 */
 
 public class Average {
