@@ -24,7 +24,7 @@ import java.io.*;
 	output
 	Yes
 	
-	Solution : 마지막 0 0 이면 close
+	Solution : 전체 비용과 같으면 Yes 아니면 No
 */
 
 public class Receipt {
