@@ -9,9 +9,9 @@ import java.io.*;
 	input			 
 	5
 	5
-	2
-	3
 	4
+	3
+	2
 	1
 	
 	output
@@ -21,13 +21,15 @@ import java.io.*;
 	4
 	5
 	
-	Solution : 1. 선택 정렬을 이용..!
+	Solution : 1. Arrays를 이용했다. 편하니까!
+			   2. Return도 그냥 StringBuilder가 간편해서 썼음.
 */
 
-public class NumberSort {
+public class NumberSort2 {
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		
 		int count = Integer.parseInt(br.readLine()); // 받는 갯수
 		int[] arr = new int[count];
@@ -35,18 +37,12 @@ public class NumberSort {
 			arr[i] = Integer.parseInt(br.readLine());
 		}
 		
-		for(int i=0; i<count-1; i++) {
-			for(int j=i+1; j<count; j++) {
-				if(arr[i] > arr[j]) {
-					int temp = arr[j];
-					arr[j] = arr[i];
-					arr[i] = temp;
-				}
-			}
-		}
+		Arrays.sort(arr);
 		
 		for(int val : arr) {
-			System.out.println(val);
+			sb.append(val + "\n");
 		}
+		
+		System.out.println(sb.toString());
 	}
 }
