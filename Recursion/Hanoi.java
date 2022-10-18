@@ -63,7 +63,7 @@ public class Hanoi {
 			
 			list.add(move);
 			
-			Hanoi(n-1, mid, start, end);
+			Hanoi(n-1, mid, start, end); 
 		}
 	}
 }
