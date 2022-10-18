@@ -17,7 +17,8 @@ import java.io.*;
 	output
 	21
 	
-	Solution : 
+	Solution : 1. String을 split하여 배열에 담아줌
+			   2. 순회를 하여 근사치값을 찾음(최대를 넘지 않아야하며, 3장을 더한값이 현재값 보다 크면 초기화 실시
 	
 */
 
