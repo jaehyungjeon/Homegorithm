@@ -23,7 +23,9 @@ import java.util.StringTokenizer;
 	output
 	4
 	
-	Solution : 1. 3
+	Solution : 1. DFS와 DP를 이용하여 값을 지속적으로 증진시키는 문제
+			   2. 범위를 벗어나지 않는 케이스 및 값이 작은 경우로 이동하는 것들을 탐색
+			   3. DP의 값이 0보다 작을 경우는 다시 DFS로 탐색 실시
 
 */
 
