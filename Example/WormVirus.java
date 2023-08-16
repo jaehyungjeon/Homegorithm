@@ -70,6 +70,7 @@ public class WormVirus {
 		}
 		
 		System.out.println(answer);
+		br.close();
 	}
 	
 	private static void dfs(int start) {
