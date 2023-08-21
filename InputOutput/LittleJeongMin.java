@@ -17,7 +17,6 @@ import java.util.StringTokenizer;
 
 */
 
-
 public class LittleJeongMin {
 
 	public static long answer = 0;
