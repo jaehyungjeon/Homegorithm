@@ -67,7 +67,7 @@ public class YourScore {
 		double sum = 0.0;
 		for(int i=0; i<20; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
-			String course = st.nextToken();
+			st.nextToken();
 			double score = Double.parseDouble(st.nextToken());
 			String grade = st.nextToken();
 			
