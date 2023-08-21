@@ -23,7 +23,8 @@ import java.util.StringTokenizer;
 	output
 	1 2 1 1 0
 	
-	Solution : 1. 입력 받은 수 계산
+	Solution : 1. 반복문을 사용햐여 배열의 값 새롭게 input
+			   2. 내용 자체는 어려움 없음. 없을때 배열에 0 한번 넣어주는게 포인트
 
 */
 
