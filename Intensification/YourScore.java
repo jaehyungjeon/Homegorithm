@@ -56,7 +56,6 @@ import java.util.StringTokenizer;
 			   3. 마지막 소숫점 6자리까지 뽑기 위해서 String.format 사용
 */
 
-
 public class YourScore {
 
 	public static void main(String[] args) throws Exception {
