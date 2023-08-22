@@ -1,7 +1,7 @@
 package Arithmetic;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 /*
 	Question : 무한히 큰 배열에 다음과 같이 분수들이 적혀있다.
@@ -22,21 +22,38 @@ import java.io.*;
 	output
 	2/1
 	
-	Solution : 대각선을 기준으로 짝수일 때는, 우 - 좌 오름차순 // 홀수일 경우에는, 좌 - 우 오름차순
-	
-	1 2 6 7 15
-	3 5 8 14
-	4 9 13
-	10 12
-	11
+	Solution : 1. 대각선 기준 분수 누적합을 구하여 맞는 범위에서 탐색한다.
+			   2. 홀수 기준으로는 분모가 증가하고 분자가 감소하는 로직.
+			   3. 짝수 기준으로는 분모가 감소하고 분자가 증가하는 로직.
+			   4. 각 기준은 최저값은 무조건 1 / 최댓값은 라인의 최댓값으로 규정
+			   5. 대각선에 위치하는 개수는 다음 대각선으로 넘어갈 떄 +1 해준다.
+			   
 */
 
 public class FindFraction {
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+		int N = Integer.parseInt(br.readLine());
+		int cross_count = 1; // 대각선에 위치하는 개수 => 다음 대각선으로 넘어갈 경우 + 1
+		int prev_count_sum = 0;
+		
+		while (true) {
+			if (N <= prev_count_sum + cross_count) {	
+				if (cross_count % 2 == 1) {	// 홀수 
+					System.out.print((cross_count - (N - prev_count_sum - 1)) + "/" + (N - prev_count_sum));
+					break;
+				} else { // 짝수
+					System.out.print((N - prev_count_sum) + "/" + (cross_count - (N - prev_count_sum - 1)));
+					break;
+				}
+ 
+			} else {
+				prev_count_sum += cross_count;
+				cross_count++;
+			}
+		}
 		
 	}
 }
