@@ -23,7 +23,7 @@ import java.util.StringTokenizer;
 	output
 	1 2 1 1 0
 	
-	Solution : 1. 
+	Solution : 1. 범위에 따라서 배열의 값을 초기화 시킨다. 
 
 */
 
