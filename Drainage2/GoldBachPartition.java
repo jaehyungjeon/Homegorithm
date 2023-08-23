@@ -2,10 +2,7 @@ package Drainage2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /*
 	Question : 골드바흐의 추측: 2보다 큰 짝수는 두 소수의 합으로 나타낼 수 있다.
@@ -33,7 +30,6 @@ import java.util.List;
 			   4. 사이즈 값 자체를 리턴시켜준다.
 
 */
-
 
 public class GoldBachPartition {
 
