@@ -1,29 +1,31 @@
 package Drainage2;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /*
-	Question : 골드바흐의 추측: 2보다 큰 짝수는 두 소수의 합으로 나타낼 수 있다.
+	Question : 서강대학교 컴퓨터공학과 실습실 R912호에는 현재 N개의 창문이 있고 또 N명의 사람이 있다. 
+	1번째 사람은 1의 배수 번째 창문을 열려 있으면 닫고 닫혀 있으면 연다.  2번째 사람은 2의 배수 번째 창문을 열려 있으면 닫고 닫혀 있으면 연다. 
+	이러한 행동을 N번째 사람까지 진행한 후 열려 있는 창문의 개수를 구하라. 단, 처음에 모든 창문은 닫혀 있다.
+
+	예를 들어 현재 3개의 창문이 있고 3명의 사람이 있을 때,
 	
-	짝수 N을 두 소수의 합으로 나타내는 표현을 골드바흐 파티션이라고 한다. 짝수 N이 주어졌을 때, 골드바흐 파티션의 개수를 구해보자. 두 소수의 순서만 다른 것은 같은 파티션이다.
+	1번째 사람은 1의 배수인 1,2,3번 창문을 연다. (1, 1, 1)
+	2번째 사람은 2의 배수인 2번 창문을 닫는다. (1, 0, 1)
+	3번째 사람은 3의 배수인 3번 창문을 닫는다. (1, 0, 0)
+	결과적으로 마지막에 열려 있는 창문의 개수는 1개 이다.
 	
 	input
-	5
-	6
-	8
-	10
-	12
-	100
+	3
+	-----
+	24
 	
 	output
 	1
-	1
-	2
-	1
-	6
+	-----
+	4
 	
-	Solution : 1. 로직 헷갈려서 답안 참고.
-			   2. 소수를 boolean 배열에 넣는 로직은 결국 sqrt를 이용하여 구하는 것과 동일한 로직이다.(반복문의 횟수를 줄여줌)
-			   3. 중앙 인덱스를 기준으로 끝과 끝의 값을 더했을 때, 값이 일치하면 되는 것이므로 사이즈 값을 구해준다.
-			   4. 사이즈 값 자체를 리턴시켜준다.
+	Solution : 1. 제곱수만 카운트 해주면 값과 일치한다.
 
 */
 
@@ -31,7 +33,16 @@ public class CloseWindow {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int N = Integer.parseInt(br.readLine());
+		int count = 0;
+		
+        for(int i = 1; i * i <= N; i++) {
+            count++;
+        }
+        
+		System.out.println(count);
 	}
 
 }
