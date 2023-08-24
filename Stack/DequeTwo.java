@@ -43,7 +43,7 @@ import java.util.StringTokenizer;
 	5
 	3
 	
-	Solution : 1. 
+	Solution : 1. Deque를 이용한 문제
 
 */
 
