@@ -33,7 +33,7 @@ import java.util.StringTokenizer;
 			   
 */
 
-public class NandM {
+public class NandM1 {
 
 	public static int[] arr;
 	public static boolean[] visited;
