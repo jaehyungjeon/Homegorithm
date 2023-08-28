@@ -39,7 +39,7 @@ import java.util.StringTokenizer;
 			   2. 따라서, 해당 큐의 타입이 0일 경우에 들어온 value를 현재 자리로 교체해주고, 기존의 데이터는 다른 큐 타입을 만나면 교체해주는 방식이다.
 			   3. 출력되는 수는 밀려난 value 즉, 기존에 들어있으나 큐가 진행됨에 따라 밀려난 값을 append 해주는 것이다.
 			   4. StringBuilder 안써주면 계속 프린트 되는 동작이 실행되므로 시간초과 에러가 나옴.
-			   
+
 */
 
 public class QueueStack {
