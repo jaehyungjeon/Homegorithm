@@ -57,7 +57,7 @@ public class NandM2 {
 		
 		for(int i=start; i<=N; i++) {
 			arr[depth] = i;
-			dfs(i+1, depth+1);
+			dfs(i+1, depth+1); // i+1 해줌으로서, 같은 행의 위치는 재귀하지 않음. ex) 2-2 (x), 2-3(o) .... -> 8-2(x), 8-9(o)
 		}
 	}
 }

@@ -64,7 +64,7 @@ public class NandM4 {
 		
 		for(int i=start; i<=N; i++) {
 			arr[depth] = i;
-			dfs(i, depth+1);
+			dfs(i, depth+1); // i를 그대로 사용함으로서, 같은 행의 위치를 포함함. ex) 2-2 (o), 2-3(o) .... -> 8-2(o), 8-8(0)
 		}
 			
 	}

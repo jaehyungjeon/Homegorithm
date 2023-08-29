@@ -65,7 +65,7 @@ public class NandM1 {
 		}
 		
 		for(int i=0; i<N; i++) {
-			if(!visited[i]) {
+			if(!visited[i]) { // 동일한 위치에는 방문하지 않겠다. ex) 1-1, 2-2, 3-3...
 				visited[i] = true;
 				arr[depth] = i + 1;
 				dfs(N, M, depth + 1);
