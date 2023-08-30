@@ -52,7 +52,7 @@ public class ContinualSum {
 		if(dp[M] == null) {
 			// 동적으로 계속 합을 더한다.
 			dp[M] = Math.max(dpMethod(M-1) + arr[M], arr[M]);
-			
+			System.out.println(dp[M]);
 			Max = Math.max(Max, dp[M]);
 		}
 		
