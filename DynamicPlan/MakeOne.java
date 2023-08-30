@@ -17,40 +17,34 @@ import java.io.InputStreamReader;
 	output
 	1
 	
-	Solution : 1. 기존 값에서 -1하는것과 2, 3으로 나눈 것 중에서 최소인 횟수를 리턴해준다.
+	Solution : 1. 순차적으로 나올 수 있는 최소의 경우를 구해본 결과, 이전의 dp에서 +1 즉, -1을 한 결과보다 나누어 떨어지는 경우에서 하나를 추가한 것이 더 클 경우 해당 값 리턴
+			   2. 3으로 나누어 떨어지는 경우도 2로 나누어 떨어지는 경우와 마찬가지로 동일.
+			   3. 최종적으로는 마지막의 dp값을 반환.
 
 */
 
 public class MakeOne {
 	
-	public static Integer[] dp;
-	public static int[] arr;
+	public static int[] dp;
 	public static int Min = Integer.MAX_VALUE;
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
-		dp = new Integer[N+1];
-		dp[0] = dp[1] = 0;
+		dp = new int[N+1];
+		dp[1] = 0;
 		
-		System.out.println(dpMethod(N));
-	}
-	
-	private static int dpMethod(int N) {
-		if(dp[N] == null) {
-			if(N%6 == 0) { // 2와 3의 배수인 6으로 나누었을때 2와 3으로 나눈 것 중 최소를 구한다.
-				dp[N] = Math.min(dpMethod(N-1), Math.min(dpMethod(N/3), dpMethod(N/2))) + 1;
-			} else if(N%3 == 0) {
-				dp[N] = Math.min(dpMethod(N-1), dpMethod(N/3)) + 1;
-			} else if(N%2 == 0) {
-				dp[N] = Math.min(dpMethod(N-1), dpMethod(N/2)) + 1;
-			} else {
-				dp[N] = dpMethod(N-1) + 1;
+		for(int i=2; i<=N; i++) {
+			dp[i] = dp[i-1] + 1;
+			if(i%2 == 0) {
+				dp[i] = Math.min(dp[i], dp[i/2]+1);
+			}
+			if(i%3 == 0) {
+				dp[i] = Math.min(dp[i], dp[i/3]+1);
 			}
 		}
 		
-		return dp[N];
+		System.out.println(dp[N]);
 	}
-
 }
