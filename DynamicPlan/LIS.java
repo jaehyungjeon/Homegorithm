@@ -21,6 +21,7 @@ import java.util.StringTokenizer;
 			   3. 스타트 시점이 i가 2인 케이스부터 시작하므로 i가 1일 경우는 길이가 1이라는 점을 명시하여 출력 후 종료해줄 수 있도록 한다.
 
 */
+
 public class LIS {
 
 	public static int[] arr, dp;
