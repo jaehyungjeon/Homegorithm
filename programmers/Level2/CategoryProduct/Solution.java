@@ -10,7 +10,7 @@ package programmers.Level2.CategoryProduct;
 	PRICE	INTEGER	FALSE
 	상품 별로 중복되지 않는 8자리 상품코드 값을 가지며, 앞 2자리는 카테고리 코드를 의미합니다.
 	
-	Solution : SUBSTR을 사용할 수도 있지만... LPAD로 왼쪽부터 자름 
+	Solution : 1. SUBSTR을 사용할 수도 있지만... LPAD로 왼쪽부터 자름 
 */
 
 public class Solution {
